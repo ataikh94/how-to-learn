@@ -113,9 +113,9 @@
   padding-bottom: 30px;
   }
 
- .two-columns__paragraph:after {
-  margin-bottom: 30px;
- }
+ .two-columns__paragraph:last-child {
+  padding-bottom: 0;
+}
 
  .two-columns__span-accent {
   font-size: 24px;
@@ -155,6 +155,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 0;
   }
 
   .table__cell {
