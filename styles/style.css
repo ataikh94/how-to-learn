@@ -1,3 +1,12 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -18,6 +27,7 @@
   display: flex;
   position: relative;
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .logo_place_header {
@@ -59,7 +69,13 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+  opacity: 100%;
+  transition: opacity .2s linear ;
 }
+
+.header__link:hover{
+  opacity: 80%;
+ }
 
 .header__main-illustration {
   width: 765px;
@@ -79,6 +95,10 @@
   background-color: #2f80ed;
 }
 
+.rotation {
+  animation: rotation 20s linear infinite;
+}
+
   /* MAIN */
 
   .description {
@@ -94,7 +114,6 @@
 
  .two-columns__brief {
   width: 175px;
-  min-height: auto;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
@@ -105,7 +124,6 @@
  .two-columns__main-text {
   width: 80%;
   min-width: 784px;
-  height: max-content;
   }
 
   .two-columns__paragraph {
@@ -130,27 +148,23 @@
  .techniques {
   padding-top: 100px;
   padding-bottom: 0;
-  height: 80%;
+  width: 80%;
+  margin: auto;
  }
 
  .cards {
   display: flex;
   flex-wrap: wrap;
   width: 920px;
-  margin: auto;
+  margin: 60px auto 0;
+  gap: 60px 100px;
  }
 
  .cards__item {
-    margin-right: 100px;
     width: 240px;
- }
-
- .cards__item:nth-child(3n) {
-  margin-right: 0;
-}
+  }
 
  .cards__image {
-  margin-top: 60px;
   margin-left: 40px;
   margin-right: 40px;
   width: 160px;
@@ -263,10 +277,11 @@
 
   .khan {
     background-color: #f2f2f2;
+     padding-top: 105px;
+ 
   }
   .khan__container {
     width: 80%;
-    padding-top: 105px;
     margin: auto;
   }
 
@@ -327,7 +342,14 @@
     margin: 0;
     color: #2f80ed;
     text-decoration: none;
+    opacity: 100%;
+    transition: opacity .2s linear ;
   }
+
+  .khan__buy-link:hover{
+    opacity: 80%;
+  }
+
 
   .feynman {
     min-height: 890px;
@@ -378,7 +400,13 @@
     position: absolute;
     top: 50%;
     right: 48px;
+    opacity: 100%;
+    transition: opacity .2s linear ;
 }
+
+  .feynman__link:hover{
+  opacity: 80%;
+  }
 
 .kaufman {
   background-color: #1f1f1f;
@@ -439,10 +467,18 @@
   padding-top: 80px;
   width: 1100px;
   margin: auto;
-}
-.resources__link {
   
 }
+.resources__link {
+  opacity: 100%;
+  transition: opacity .2s linear ;
+ }
+
+ .resources__link:hover{
+  opacity: 80%;
+  }
+
+  
 .resources__logo {
   width: 270px;
   height: 38px;
@@ -500,6 +536,14 @@
   line-height: 30px;
 }
 
+.footer__column-link {
+  opacity: 100%;
+  transition: opacity .2s linear ;
+}
+
+ .footer__column-link:hover{
+  opacity: 80%;
+  }
 
 .footer__social-icon {
   padding-right: 10px;
