@@ -1,4 +1,4 @@
-@import url(vendor/normalize.css);
+@import url(pages/normalize.css);
 @import url(blocks/page.css);
 
 /*HEADER*/
@@ -30,8 +30,8 @@
 
 /*section video*/
 @import url(blocks/main/video/video.css);
-@import url(blocks/main/video/__items/video__items.css);
-@import url(blocks/main/video/__item/video__item.css);
+@import url(blocks/main/video/__iframes/video__iframes.css);
+@import url(blocks/main/video/__iframe/video__iframe.css);
 
 /*section oakley*/
 @import url(blocks/main/oakley/oakley.css);
@@ -82,6 +82,7 @@
 
 /*FOOTER*/
 @import url(blocks/footer/footer.css);
+@import url(blocks/footer/logo/_place_footer/logo_place_footer.css);
 @import url(blocks/footer/__columns/footer__columns.css);
 @import url(blocks/footer/__column/_content/footer__column_content_copyright.css);
 @import url(blocks/footer/__author/footer__author.css);
